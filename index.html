@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simple Web App</title>
+  <meta charset="UTF-8">
+  <style>
+    body {
+      background-color: silver;
+      font-family: Arial, sans-serif;
+    }
+
+    h2 {
+      color: darkblue;
+      text-align: center;
+    }
+
+    label {
+      color: darkgreen;
+      font-weight: bold;
+    }
+
+    input {
+      color: black;
+      padding: 5px;
+      margin: 5px 0;
+      border: 1px solid #333;
+      border-radius: 4px;
+    }
+
+    input::placeholder {
+      color: gray;
+      font-style: italic;
+    }
+
+    button {
+      background-color: orange;
+      color: white;
+      padding: 5px 15px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    button:hover {
+      background-color: darkorange;
+    }
+
+    #greeting {
+      color: purple;
+      font-size: 18px;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h2>Welcome to My Simple Web Application</h2>
+
+  <label for="name">Enter your name:</label>
+  <input type="text" id="name" placeholder="Type your name here">
+  <button onclick="sayHello()">Submit</button>
+
+  <p id="greeting"></p>
+
+  <script>
+    function sayHello() {
+      let name = document.getElementById("name").value;
+      if (name) {
+        document.getElementById("greeting")
